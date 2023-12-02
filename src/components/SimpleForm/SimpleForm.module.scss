@@ -1,0 +1,20 @@
+.form{
+    width: 300px;
+    padding: 20px;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+.textInput{
+    margin: 5px;
+    border: 2px solid black;
+}
+.submitInput{
+    margin: 5px;
+    border-radius: 0;
+    outline: none;
+    border: none;
+    padding: 2px;
+    width: 30%;
+    align-self: flex-end;
+}

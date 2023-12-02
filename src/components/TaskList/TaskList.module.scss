@@ -1,0 +1,28 @@
+.container{
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.task{
+    display: flex;
+    padding: 5px;
+    align-items: center;
+}
+.taskCheckbox{
+    height: 20px;
+}
+.taskTitle{
+    flex: 1;
+    margin-left: 10px;
+}
+.taskCompleted{
+    color: green;
+}
+.taskNotCompleted{
+    color: red;
+}
+.taskButton{
+
+    height: 30px;
+}
