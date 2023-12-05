@@ -28,6 +28,7 @@ export const DynamicList = ({ n }) => {
     );
 };
 
+
 DynamicList.propTypes = {
-    n: PropTypes.number.isRequired, // Walidacja propa 'n' jako wymaganej liczby
-};
+    n: PropTypes.number.isRequired
+};  

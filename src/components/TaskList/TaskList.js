@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'; // Dodaj import prop-types
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
   container,
@@ -11,24 +11,8 @@ import {
   taskTitle,
 } from './TaskList.module.scss';
 
-export const TaskList = ({ listOfTasks }) => {
-  const [tasks, setTasks] = useState(listOfTasks);
-
-  const handleRemove = (oneTask) => {
-    setTasks(tasks.filter((taskItem) => taskItem.id !== oneTask.id));
-  };
-
-  const handleToggle = (oneTask) => {
-    setTasks(
-      tasks.map((task) => {
-        return task.id == oneTask.id
-          ? { ...task, completed: !task.completed }
-          : task;
-      })
-    );
-  };
-
-
+export const TaskList = ({ tasks, handleRemove, handleToggle }) => {
+  
   return (
     <div className={`${container}`}>
       {tasks.map((oneTask) =>
@@ -75,5 +59,7 @@ export const TaskList = ({ listOfTasks }) => {
 };
 
 TaskList.propTypes = {
-  listOfTasks: PropTypes.array.isRequired, // Walidacja propa 'n' jako wymaganej liczby
+  tasks: PropTypes.array.isRequired,
+  handleRemove: PropTypes.func.isRequired,
+  handleToggle: PropTypes.func.isRequired
 };
